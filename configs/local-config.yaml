@@ -1,0 +1,18 @@
+application:
+  serviceName: "MyMicroserviceApp"
+  description: "Application providing various microservices"
+  endpoint: "/microforge-service"
+  port: 8080
+
+services:
+  - name: "Other Service Name"
+    endpoint: "/other-service"
+
+dynamodb:
+  region: ""
+  tableName: ""
+
+aws:
+  accessKeyId: "YOUR_AWS_ACCESS_KEY"
+  secretAccessKey: "YOUR_AWS_SECRET_KEY"
+  defaultRegion: "us-west-2"
