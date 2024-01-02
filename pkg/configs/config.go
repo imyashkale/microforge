@@ -21,6 +21,12 @@ func (c Config) Validate() error {
 	return nil
 }
 
+// sets the configuration file path
+func (c *Config) SetConfigFilePath(filepath string) {
+	c.AppConfigPath = filepath
+}
+
+// Load loads configuration from the file
 func (c *Config) Load(logger log.Logger) error {
 	
 
