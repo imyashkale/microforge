@@ -14,7 +14,7 @@ import (
 	"github.com/imyashkale/microforge/internal/healthcheck"
 	"github.com/imyashkale/microforge/pkg/configs"
 	"github.com/imyashkale/microforge/pkg/dynamodb"
-	errors "github.com/imyashkale/microforge/pkg/errrors"
+	errors "github.com/imyashkale/microforge/pkg/errors"
 	"github.com/imyashkale/microforge/pkg/log"
 )
 
