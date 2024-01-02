@@ -14,6 +14,7 @@ import (
 	"github.com/imyashkale/microforge/internal/healthcheck"
 	"github.com/imyashkale/microforge/pkg/configs"
 	"github.com/imyashkale/microforge/pkg/dynamodb"
+	errors "github.com/imyashkale/microforge/pkg/errrors"
 	"github.com/imyashkale/microforge/pkg/log"
 )
 
@@ -28,10 +29,11 @@ type Application struct {
 	config    *configs.Config
 }
 
-// middlewares“
+// middlewares
 func (app *Application) middlewares() {
 	// CORS
 	app.router.Use(cors.Default())
+	app.router.Use(errors.Handler(app.logger))
 }
 
 // attaching handlers
@@ -61,8 +63,6 @@ func main() {
 		app.logger.Errorf("loading configuration failed %s", err.Error())
 		return
 	}
-
-	// connecting to the dynamodb
 
 	// middlewares are attached
 	app.middlewares()
