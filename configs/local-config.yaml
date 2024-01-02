@@ -2,6 +2,7 @@ application:
   serviceName: "MyMicroserviceApp"
   description: "Application providing various microservices"
   endpoint: "/microforge-service"
+  version: v1.0.0
   port: 8080
 
 services:
